@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AngkolsKitchenApp">
         <activity
+            android:name=".AfterPurchase"
+            android:exported="true" />
+        <activity
             android:name=".FoodCart"
             android:exported="true" />
         <activity
