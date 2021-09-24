@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="divider">#F7F5F4</color> //purchase history
+    <color name="colorPrice">#616161</color> //purchase history
+    <color name="bt_border_color">#99999A</color> //purchase history
 </resources>

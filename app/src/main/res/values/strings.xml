@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Angkol\'sKitchenApp</string>
+    <string name="your_order">Your Orders</string>
+    <string name="order_number">Order #1</string>
+    <string name="order_status">Processing</string>
+    <string name="phone_number">Phone</string>
+    <string name="order_address">Address</string>
+    <string name="payment_method">COD</string>
+    <string name="order_on_txt">Order on</string>
+    <string name="order_date">25/09/2021</string>
+    <string name="order_total_price">Php 300.00</string>
+    <string name="num_of_items">Num of Item 2</string>
 </resources>
