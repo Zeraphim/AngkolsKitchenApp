@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "235196044970",
+    "project_id": "angkolskitchenapp",
+    "storage_bucket": "angkolskitchenapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235196044970:android:118c00441919dffa3ce2d3",
+        "android_client_info": {
+          "package_name": "com.example.angkolskitchenapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235196044970-3oqrdem1vbcgks1a952livknobrknmus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn_SyxsJog0ee1ajkckbJ5F5eNMbyTjUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "235196044970-3oqrdem1vbcgks1a952livknobrknmus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
