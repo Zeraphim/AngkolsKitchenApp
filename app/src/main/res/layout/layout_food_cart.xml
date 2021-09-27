@@ -44,7 +44,7 @@
 
                 <TextView
                     android:id="@+id/productQuantity2"
-                    android:layout_width="150dp"
+                    android:layout_width="207dp"
                     android:layout_height="38dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical|right"
@@ -53,10 +53,9 @@
 
                 <TextView
                     android:id="@+id/productQuantity"
-                    android:layout_width="wrap_content"
+                    android:layout_width="29dp"
                     android:layout_height="38dp"
-                    android:gravity="center_vertical|right"
-                    android:text="TextView"
+                    android:text="3"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -64,14 +63,14 @@
                 android:id="@+id/productName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="Food Name"
                 android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/productCalories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="xx calories"
                 android:textSize="12sp" />
 
             <LinearLayout
@@ -80,7 +79,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="168dp"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_vertical|right"
@@ -92,7 +91,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView"
+                    android:text="150.00"
                     android:textSize="18sp" />
             </LinearLayout>
 
