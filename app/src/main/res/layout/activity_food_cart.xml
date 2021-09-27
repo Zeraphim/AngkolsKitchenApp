@@ -21,10 +21,12 @@
         android:id="@+id/imageButton5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/homeAsUpIndicator"
-        tools:layout_editor_absoluteX="29dp" />
+        app:srcCompat="?attr/homeAsUpIndicator" />
 
     <Button
         android:id="@+id/CheckOutButton"

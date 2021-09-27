@@ -10,4 +10,5 @@
     <string name="order_date">25/09/2021</string>
     <string name="order_total_price">Php 300.00</string>
     <string name="num_of_items">Num of Item 2</string>
+    <string name="place_order_message">Your order will be delivered to:</string>
 </resources>
