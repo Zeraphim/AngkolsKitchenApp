@@ -10,58 +10,64 @@
         android:id="@+id/imageView2"
         android:layout_width="299dp"
         android:layout_height="284dp"
-        app:layout_constraintBottom_toTopOf="@+id/AfterPurchaseMessage"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849"
+        app:layout_constraintTop_toBottomOf="@+id/backToMainButton"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/AfterPurchaseMessage"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="40dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/AddressPrompt"
+        android:layout_marginTop="10dp"
+        android:text="@string/after_purchase_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/AddressPrompt"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/PricePrompt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/PricePrompt"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_marginTop="70dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="504dp" />
+        app:layout_constraintTop_toBottomOf="@+id/AfterPurchaseMessage" />
+
+    <TextView
+        android:id="@+id/PricePrompt"
+        android:layout_width="58dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/EstimatedTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddressPrompt"
+        app:layout_constraintVertical_bias="0.008" />
 
     <TextView
         android:id="@+id/EstimatedTime"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="17dp"
         android:layout_marginStart="44dp"
         android:layout_marginLeft="44dp"
-        android:layout_marginBottom="36dp"
-        android:text="TextView"
+        android:layout_marginBottom="80dp"
+        android:text="@string/order_status_label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/backToMainButton"
         android:layout_width="0dp"
         android:layout_height="43dp"
         android:layout_marginStart="28dp"

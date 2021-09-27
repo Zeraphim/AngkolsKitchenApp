@@ -7,7 +7,7 @@
     tools:context=".FoodCart">
 
     <ImageButton
-        android:id="@+id/foodCartBackButton"
+        android:id="@+id/backToGalleryButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -47,7 +47,7 @@
         android:layout_marginBottom="16dp"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/checkOutButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.694"
         app:layout_constraintStart_toStartOf="parent">
@@ -119,7 +119,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/checkOutButton"
         android:layout_width="134dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -140,6 +140,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foodCartBackButton" />
+        app:layout_constraintTop_toBottomOf="@+id/backToGalleryButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
