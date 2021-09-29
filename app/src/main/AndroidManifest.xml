@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AngkolsKitchenApp">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".GalleryMenu"></activity>
         <activity
             android:name=".PlaceOrder"
             android:exported="true" />
