@@ -65,24 +65,24 @@ public class MainActivity extends AppCompatActivity {
 
         List<OnboardingItem> onboardingItems = new ArrayList<>();
 
-        OnboardingItem itemPayOnline = new OnboardingItem();
-        itemPayOnline.setTitle("Pay Your Bill Online");
-        itemPayOnline.setDescription("Electric bill payment is a feature of online, mobile and telephone banking.");
-        itemPayOnline.setImage(R.drawable.pay_online);
+        OnboardingItem welcomeToApp = new OnboardingItem();
+        welcomeToApp.setTitle("Welcome To Angkol's Kitchen");
+        welcomeToApp.setDescription("Get started by exploring a variety of  delicacies and discovering your favourite meals that you could easily select in a single tap and have it delivered right at your doorstep.");
+        welcomeToApp.setImage(R.drawable.pay_online);
 
-        OnboardingItem itemOnTheWay = new OnboardingItem();
-        itemOnTheWay.setTitle("Your Food Is On The Way");
-        itemOnTheWay.setDescription("Our delivery rider is on the way to deliver your order.");
-        itemOnTheWay.setImage(R.drawable.on_the_way);
+        OnboardingItem weCare = new OnboardingItem();
+        weCare.setTitle("We Care A Lot");
+        weCare.setDescription("Not only can you order good food, but also keep track of the nutritional facts and needs that your diet requires, implemented by the health feature of this app that automatically computes caloric intake.");
+        weCare.setImage(R.drawable.on_the_way);
 
-        OnboardingItem itemEatTogether = new OnboardingItem();
-        itemEatTogether.setTitle("Eat Together");
-        itemEatTogether.setDescription("Enjoy your meal and have a great day. Don't forget to rate us.");
-        itemEatTogether.setImage(R.drawable.eat_together);
+        OnboardingItem enjoyTheApp = new OnboardingItem();
+        enjoyTheApp.setTitle("Enjoy Mga Ka Angkol's");
+        enjoyTheApp.setDescription("Nonetheless, Angkol's Kitchen values customer satisfaction through distinctive meals that will leave you wanting more. Hence, let's jump right into it by signing up, exploring the app feautures and don't forget to click on the order button. See you mga ka-Angkol's!");
+        enjoyTheApp.setImage(R.drawable.eat_together);
 
-        onboardingItems.add(itemPayOnline);
-        onboardingItems.add(itemOnTheWay);
-        onboardingItems.add(itemEatTogether);
+        onboardingItems.add(welcomeToApp);
+        onboardingItems.add(weCare);
+        onboardingItems.add(enjoyTheApp);
 
         onboardingAdapter = new OnboardingAdapter(onboardingItems);
     }
