@@ -10,4 +10,14 @@
     <color name="divider">#F7F5F4</color> //purchase history
     <color name="colorPrice">#616161</color> //purchase history
     <color name="bt_border_color">#99999A</color> //purchase history
+
+
+    // Onboarding Colors
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="ColorAccent">#FF5252</color>
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorOnboardingIndicatorInactive">#72BCF7</color>
 </resources>
