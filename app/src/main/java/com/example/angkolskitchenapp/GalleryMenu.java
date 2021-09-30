@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.Gallery;
+import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -13,12 +16,18 @@ public class GalleryMenu extends AppCompatActivity {
 
     Button btnLogOut;
     FirebaseAuth mAuth;
+    ImageButton btnAccount;
+    ImageButton btnHome;
+    ImageButton btnCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery_menu);
 
+        btnAccount = findViewById(R.id.btnAccount);
+        btnHome = findViewById(R.id.btnHome);
+        btnCart = findViewById(R.id.btnCart);
         btnLogOut = findViewById(R.id.btnLogout);
         mAuth = FirebaseAuth.getInstance();
 
@@ -36,5 +45,26 @@ public class GalleryMenu extends AppCompatActivity {
         if (user == null){
             startActivity(new Intent(GalleryMenu.this, LoginActivity.class));
         }
+    }
+
+    public void openAccount (View view){
+        Intent intent = new Intent(this, Account.class);
+        startActivity(intent);
+    }
+
+    public void openCart (View view){
+        Intent intent = new Intent(this, FoodCart.class);
+        startActivity(intent);
+    }
+
+    public void openHome (View view){
+        Intent intent = new Intent(this, GalleryMenu.class);
+        startActivity(intent);
+    }
+
+    public void openIndivProduct (View view){
+        Intent intent = new Intent(this, IndividualProduct.class);
+        startActivity(intent);
+
     }
 }
