@@ -26,7 +26,7 @@ public class AboutPage extends AppCompatActivity {
     }
 
     public void openMainActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, GalleryMenu.class);
         startActivity(intent);
     }
 }

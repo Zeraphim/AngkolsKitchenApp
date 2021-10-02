@@ -16,4 +16,6 @@
     <string name="food_cart_label">ANGKOL\'S CART</string>
     <string name="after_purchase_message">THANK YOU FOR ORDERING!</string>
     <string name="order_status_label">Processing</string>
+    <string name="order_items">Ordered Items</string>
+    <string name="about_us">About Us</string>
 </resources>

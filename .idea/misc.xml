@@ -3,13 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AngkolsKitchenApp/app/src/main/res/layout/activity_about_page.xml" value="0.2658514492753623" />
-        <entry key="..\:/AngkolsKitchenApp/app/src/main/res/layout/activity_main.xml" value="0.2658514492753623" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_about_page.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_about_page2.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_account.xml" value="0.13903985507246377" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_after_purchase.xml" value="0.13903985507246377" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_food_cart.xml" value="0.13903985507246377" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_gallery_menu.xml" value="0.22" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_individual_product.xml" value="0.22" />
         <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_purchase_history.xml" value="0.1" />
-        <entry key="..\:/Users/Mark Cortez/StudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_after_purchase.xml" value="0.33" />
-        <entry key="..\:/Users/Mark Cortez/StudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_food_cart.xml" value="0.33" />
-        <entry key="..\:/Users/Mark Cortez/StudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_individual_product.xml" value="0.22" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_place_order.xml" value="0.1640625" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_purchase_history.xml" value="0.19027484143763213" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/activity_purchase_history2.xml" value="0.22" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/item_container_onboarding.xml" value="0.1640625" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/layout_food_cart.xml" value="0.1640625" />
+        <entry key="..\:/Users/Hanna Katherine Medi/AndroidStudioProjects/AngkolsKitchenApp/app/src/main/res/layout/layout_order.xml" value="0.3333333333333333" />
       </map>
     </option>
   </component>

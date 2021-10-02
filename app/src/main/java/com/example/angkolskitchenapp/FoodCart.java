@@ -22,7 +22,7 @@ public class FoodCart extends AppCompatActivity {
         });
         backToGalleryButton = findViewById(R.id.backToGalleryButton);
         backToGalleryButton.setOnClickListener(view -> {
-            startActivity(new Intent(FoodCart.this, MainActivity.class));
+            startActivity(new Intent(FoodCart.this, GalleryMenu.class));
         });
 
     }
