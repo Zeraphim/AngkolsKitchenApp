@@ -6,29 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
-        app:layout_constraintVertical_bias="0.45" />
-
-    <Button
-        android:id="@+id/about_us"
-        android:layout_width="124dp"
-        android:layout_height="50dp"
-        android:text="@string/about_us"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout"
-        app:layout_constraintVertical_bias="0.617" />
-
     <FrameLayout
         android:id="@+id/frameLayout2"
         android:layout_width="399dp"
@@ -53,12 +30,17 @@
             android:orientation="horizontal">
 
 
+            <Button
+                android:id="@+id/about_us"
+                android:layout_width="99dp"
+                android:layout_height="50dp"
+                android:text="@string/about_us" />
+
             <ImageButton
                 android:id="@+id/btnAccount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="openAccount"
                 app:srcCompat="@android:drawable/btn_dialog" />
 
             <ImageButton
@@ -66,7 +48,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:onClick="openHome"
                 app:srcCompat="@android:drawable/btn_dialog" />
 
             <ImageButton
@@ -74,58 +55,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="openCart"
                 app:srcCompat="@android:drawable/btn_dialog" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout" />
 
         </LinearLayout>
     </FrameLayout>
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="0dp"
-        android:layout_height="254dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gallerymenu"
+        android:layout_width="395dp"
+        android:layout_height="518dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="182dp">
-
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    tools:srcCompat="@tools:sample/avatars" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:text="Name of Food" />
-
-            </FrameLayout>
-
-            <ImageButton
-                android:id="@+id/btnIndivProduct"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="openIndivProduct"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@android:drawable/btn_star" />
-        </LinearLayout>
-    </FrameLayout>
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
