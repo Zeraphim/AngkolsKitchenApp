@@ -4,21 +4,21 @@ public class PopularModel {
 
     String prod_name;
     String description;
-    String prod_rating  ;
+    String rating  ;
     String discount;
-    String prod_type;
+    String type;
     String img_url;
 
     public PopularModel() {
 
     }
 
-    public PopularModel(String prod_name, String description, String prod_rating, String discount, String type, String img_url) {
+    public PopularModel(String prod_name, String description, String rating, String discount, String type, String img_url) {
         this.prod_name = prod_name;
         this.description = description;
-        this.prod_rating = prod_rating;
+        this.rating = rating;
         this.discount = discount;
-        this.prod_type = prod_type;
+        this.type = type;
         this.img_url = img_url;
     }
 
@@ -39,11 +39,11 @@ public class PopularModel {
     }
 
     public String getRating() {
-        return prod_rating;
+        return rating;
     }
 
     public void setRating(String rating) {
-        this.prod_rating = rating;
+        this.rating = rating;
     }
 
     public String getDiscount() {
@@ -55,11 +55,11 @@ public class PopularModel {
     }
 
     public String getType() {
-        return prod_type;
+        return type;
     }
 
     public void setType(String type) {
-        this.prod_type = type;
+        this.type = type;
     }
 
     public String getImg_url() {

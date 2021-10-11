@@ -12,7 +12,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.Toast;
 
+import com.example.angkolskitchenapp.activities.HomeActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -21,8 +23,20 @@ public class GalleryMenu extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 
+    FirebaseAuth auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        auth = FirebaseAuth.getInstance();
+
+        if(auth.getCurrentUser() == null){
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            finish();
+        }else{
+            //Toast.makeText(this, "Already logged in", Toast.LENGTH_SHORT).show();
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery_menu);
         Toolbar toolbar = findViewById(R.id.toolbar);
