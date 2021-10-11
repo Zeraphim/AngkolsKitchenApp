@@ -25,17 +25,14 @@ public class GalleryMenu extends AppCompatActivity {
 
     FirebaseAuth auth;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         auth = FirebaseAuth.getInstance();
 
-        if(auth.getCurrentUser() == null){
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-            finish();
-        }else{
-            //Toast.makeText(this, "Already logged in", Toast.LENGTH_SHORT).show();
-        }
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery_menu);

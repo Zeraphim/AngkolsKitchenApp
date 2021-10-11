@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout layoutOnboardingIndicators;
     private MaterialButton buttonOnboardingAction;
 
+    FirebaseAuth auth;
+
 
 
     @Override
@@ -55,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
         buttonOnboardingAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                auth = FirebaseAuth.getInstance();
+                if(auth.getCurrentUser() == null){
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    finish();
+                }else{
+                    //Toast.makeText(this, "Already logged in", Toast.LENGTH_SHORT).show();
+                }
+
 
                 if (onboardingViewPager.getCurrentItem() + 1 < onboardingAdapter.getItemCount()) {
                     onboardingViewPager.setCurrentItem(onboardingViewPager.getCurrentItem() + 1);
