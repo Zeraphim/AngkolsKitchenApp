@@ -2,32 +2,32 @@ package com.example.angkolskitchenapp.model;
 
 public class PopularModel {
 
-    String name;
+    String prod_name;
     String description;
-    String rating;
+    String prod_rating  ;
     String discount;
-    String type;
+    String prod_type;
     String img_url;
 
     public PopularModel() {
 
     }
 
-    public PopularModel(String name, String description, String rating, String discount, String type, String img_url) {
-        this.name = name;
+    public PopularModel(String prod_name, String description, String prod_rating, String discount, String type, String img_url) {
+        this.prod_name = prod_name;
         this.description = description;
-        this.rating = rating;
+        this.prod_rating = prod_rating;
         this.discount = discount;
-        this.type = type;
+        this.prod_type = prod_type;
         this.img_url = img_url;
     }
 
     public String getName() {
-        return name;
+        return prod_name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.prod_name = name;
     }
 
     public String getDescription() {
@@ -39,11 +39,11 @@ public class PopularModel {
     }
 
     public String getRating() {
-        return rating;
+        return prod_rating;
     }
 
     public void setRating(String rating) {
-        this.rating = rating;
+        this.prod_rating = rating;
     }
 
     public String getDiscount() {
@@ -55,11 +55,11 @@ public class PopularModel {
     }
 
     public String getType() {
-        return type;
+        return prod_type;
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.prod_type = type;
     }
 
     public String getImg_url() {

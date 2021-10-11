@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AngkolsKitchenApp">
+        <activity android:name=".activities.ViewAllActivity"></activity>
         <activity
             android:name=".AboutPage"
             android:exported="true" />

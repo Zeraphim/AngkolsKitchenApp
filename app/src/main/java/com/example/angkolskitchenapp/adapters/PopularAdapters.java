@@ -1,6 +1,7 @@
 package com.example.angkolskitchenapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.angkolskitchenapp.R;
+import com.example.angkolskitchenapp.activities.ViewAllActivity;
 import com.example.angkolskitchenapp.model.PopularModel;
 
 import java.util.List;
@@ -40,6 +42,15 @@ public class PopularAdapters extends RecyclerView.Adapter<com.example.angkolskit
         holder.rating.setText(popularModelList.get(position).getRating());
         holder.description.setText(popularModelList.get(position).getDescription());
         holder.discount.setText(popularModelList.get(position).getDiscount());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ViewAllActivity.class);
+                intent.putExtra("type", popularModelList.get(position).getType());
+                context.startActivity(intent);
+            }
+        });
 
     }
 
