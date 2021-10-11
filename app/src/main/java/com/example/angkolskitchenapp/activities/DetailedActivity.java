@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,6 +14,11 @@ import com.example.angkolskitchenapp.R;
 import com.example.angkolskitchenapp.model.ViewAllModel;
 
 public class DetailedActivity extends AppCompatActivity {
+
+
+    TextView quantity;
+    int totalQuantity = 1;
+    int totalPrice = 0;
 
     ImageView detailedImg;
     TextView price, rating, description;
@@ -37,6 +43,8 @@ public class DetailedActivity extends AppCompatActivity {
             viewAllModel = (ViewAllModel) object;
         }
 
+        quantity = findViewById(R.id.quantity);
+
         detailedImg = findViewById(R.id.detailed_img);
         addItem = findViewById(R.id.add_item);
         removeItem = findViewById(R.id.remove_item);
@@ -50,8 +58,34 @@ public class DetailedActivity extends AppCompatActivity {
             rating.setText(viewAllModel.getRating());
             description.setText(viewAllModel.getDescription());
             price.setText("Price: " + viewAllModel.getPrice());
+
+            totalPrice = viewAllModel.getPrice() * totalQuantity;
         }
 
         addToCart = findViewById(R.id.add_to_cart);
+
+        addItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (totalQuantity < 10) {
+                    totalQuantity++;
+                    quantity.setText(String.valueOf(totalQuantity));
+                }
+            }
+        });
+
+        removeItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (totalQuantity <= 10 && totalQuantity > 0) {
+                    totalQuantity--;
+                    quantity.setText(String.valueOf(totalQuantity));
+                }
+            }
+        });
+
+
     }
 }
