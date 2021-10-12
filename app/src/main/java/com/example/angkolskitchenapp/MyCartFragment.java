@@ -8,7 +8,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -38,6 +42,10 @@ public class MyCartFragment extends Fragment {
     MyCartAdapter cartAdapter;
     List<MyCartModel> cartModelList;
 
+    Button buyNow;
+    int totalBill;
+    ProgressBar progressBar;
+
     public MyCartFragment() {
         // Required empty public constructor
     }
@@ -50,12 +58,21 @@ public class MyCartFragment extends Fragment {
 
         db = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
+        progressBar = root.findViewById(R.id.progressbar);
+        progressBar.setVisibility(View.VISIBLE);
         recyclerView = root.findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         overTotalAmount = root.findViewById(R.id.textView6);
 
         LocalBroadcastManager.getInstance(getActivity()).registerReceiver(mMessageReceiver, new IntentFilter("MyTotalAmount"));
+
+        overTotalAmount = root.findViewById(R.id.textView6);
+
+        recyclerView = root.findViewById(R.id.recyclerview);
+        recyclerView.setVisibility(View.GONE);
+        buyNow = root.findViewById(R.id.buy_now);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         cartModelList = new ArrayList<>();
         cartAdapter = new MyCartAdapter(getActivity(), cartModelList);
@@ -69,10 +86,19 @@ public class MyCartFragment extends Fragment {
                         MyCartModel cartModel = documentSnapshot.toObject(MyCartModel.class);
                         cartModelList.add(cartModel);
                         cartAdapter.notifyDataSetChanged();
+                        progressBar.setVisibility(View.GONE);
+                        recyclerView.setVisibility(View.VISIBLE);
                     }
                 }
             }
         });
+
+        buyNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = ne Intent(getContext(), )
+            }
+        })
 
 
         return root;
