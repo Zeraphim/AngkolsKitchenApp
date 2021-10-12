@@ -1,6 +1,7 @@
 package com.example.angkolskitchenapp.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.angkolskitchenapp.R;
+import com.example.angkolskitchenapp.activities.NavCategoryActivity;
+import com.example.angkolskitchenapp.activities.ViewAllActivity;
 import com.example.angkolskitchenapp.model.NavCategoryModel;
 
 import java.util.List;
@@ -39,6 +42,15 @@ public class NavCategoryAdapter extends RecyclerView.Adapter<com.example.angkols
         holder.name.setText(list.get(position).getName());
         holder.description.setText(list.get(position).getDescription());
         holder.discount.setText(list.get(position).getDiscount());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, NavCategoryActivity.class);
+                intent.putExtra("type", list.get(position).getType());
+                context.startActivity(intent);
+            }
+        });
 
     }
 
