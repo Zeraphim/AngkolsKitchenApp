@@ -1,6 +1,8 @@
 package com.example.angkolskitchenapp.model;
 
-public class MyCartModel {
+import java.io.Serializable;
+
+public class MyCartModel implements Serializable {
 
     String productName;
     String productPrice;
