@@ -9,33 +9,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AngkolsKitchenApp">
-        <activity android:name=".PlaceOrderActivity"></activity>
-        <activity android:name=".activities.NavCategoryActivity" />
-        <activity android:name=".activities.DetailedActivity" />
-        <activity android:name=".activities.ViewAllActivity" />
-        <activity
-            android:name=".AboutPage"
-            android:exported="true" />
-        <activity
-            android:name=".PurchaseHistory"
-            android:exported="true" />
-        <activity android:name=".GalleryMenu" />
-        <activity android:name=".Account" />
-        <activity
-            android:name=".PlaceOrder"
-            android:exported="true" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity
-            android:name=".AfterPurchase"
-            android:exported="true" />
-        <activity
-            android:name=".FoodCart"
-            android:exported="true" />
-        <activity
-            android:name=".IndividualProduct"
-            android:exported="true" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".PlaceOrderActivity"/>
+
+        <activity android:name=".activities.NavCategoryActivity"/>
+
+        <activity android:name=".activities.DetailedActivity"/>
+
+        <activity android:name=".activities.ViewAllActivity"/>
+
+        <activity android:name=".AboutPage" android:exported="true"/>
+
+        <activity android:name=".PurchaseHistory" android:exported="true"/>
+
+        <activity android:name=".GalleryMenu"/>
+
+        <activity android:name=".Account"/>
+
+        <activity android:name=".PlaceOrder" android:exported="true"/>
+
+        <activity android:name=".RegisterActivity"/>
+
+        <activity android:name=".LoginActivity"/>
+
+        <activity android:name=".AfterPurchase" android:exported="true"/>
+
+        <activity android:name=".FoodCart" android:exported="true"/>
+
+        <activity android:name=".IndividualProduct" android:exported="true"/>
+
+
+        <activity android:name=".MainActivity"
+        android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
