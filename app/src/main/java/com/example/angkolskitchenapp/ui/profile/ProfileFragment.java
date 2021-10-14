@@ -3,12 +3,14 @@ package com.example.angkolskitchenapp.ui.profile;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,6 +19,7 @@ import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.example.angkolskitchenapp.GalleryMenu;
+import com.example.angkolskitchenapp.PlaceOrderActivity;
 import com.example.angkolskitchenapp.R;
 import com.example.angkolskitchenapp.model.UserModel;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -28,6 +31,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.io.Serializable;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -96,7 +101,40 @@ public class ProfileFragment extends Fragment {
 
     private void updateUserProfile() {
 
+        boolean nameEmpty = TextUtils.isEmpty(name.getText().toString());
+        boolean emailEmpty = TextUtils.isEmpty(email.getText().toString());
+        boolean phoneEmpty = TextUtils.isEmpty(number.getText().toString());
+        boolean addressEmpty = TextUtils.isEmpty(address.getText().toString());
 
+        if (!nameEmpty) {
+
+            database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                    .child("name").setValue(name.getText().toString());
+        }
+
+        if (!emailEmpty) {
+
+            database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                    .child("email").setValue(email.getText().toString());
+        }
+
+        if (!phoneEmpty) {
+
+            database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                    .child("phoneNum").setValue(number.getText().toString());
+        }
+
+        if (!addressEmpty) {
+
+            database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                    .child("address").setValue(address.getText().toString());
+        }
+
+
+        Toast.makeText(getContext(), "Profile Updated", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(getContext(), GalleryMenu.class);
+        startActivity(intent);
 
     }
 

@@ -11,14 +11,17 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.angkolskitchenapp.model.UserModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -33,10 +36,17 @@ public class RegisterActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
 
+    FirebaseAuth auth;
+    FirebaseDatabase database;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
 
         etRegEmail = findViewById(R.id.etRegEmail);
         etRegPassword = findViewById(R.id.etRegPass);
@@ -69,6 +79,21 @@ public class RegisterActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
+
+                        String userName = "Angkol's Kitchen App";
+                        String userEmail = etRegEmail.getText().toString();
+                        String userPassword = etRegPassword.getText().toString();
+                        String profileImg = "https://firebasestorage.googleapis.com/v0/b/angkolskitchenapp.appspot.com/o/profile.png?alt=media&token=5ee2dc2e-8d0d-45a9-bd9b-0c3740132eee";
+
+                        int calories = 0;
+                        int carbs = 0;
+                        int fat = 0;
+                        int protein = 0;
+
+                        UserModel userModel = new UserModel(userName, userEmail, userPassword, profileImg, calories, carbs, fat, protein);
+                        String id = task.getResult().getUser().getUid();
+                        database.getReference().child("Users").child(id).setValue(userModel);
+
                         Toast.makeText(RegisterActivity.this, "User registered successfully", Toast.LENGTH_SHORT).show();
                         sendNotification();
                         startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
