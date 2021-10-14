@@ -58,20 +58,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                auth = FirebaseAuth.getInstance();
-                if(auth.getCurrentUser() == null){
-                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                    finish();
-                }else{
-                    //Toast.makeText(this, "Already logged in", Toast.LENGTH_SHORT).show();
-                }
-
-
                 if (onboardingViewPager.getCurrentItem() + 1 < onboardingAdapter.getItemCount()) {
                     onboardingViewPager.setCurrentItem(onboardingViewPager.getCurrentItem() + 1);
                 } else {
-                    startActivity(new Intent(getApplicationContext(), GalleryMenu.class));
-                    finish();
+
+                    auth = FirebaseAuth.getInstance();
+                    if(auth.getCurrentUser() == null){
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                        finish();
+                    }else{
+                        //Toast.makeText(this, "Already logged in", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), GalleryMenu.class));
+                        finish();
+                    }
+
                 }
             }
         });
