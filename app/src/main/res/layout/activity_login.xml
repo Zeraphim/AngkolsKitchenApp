@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="477dp"
+        android:layout_height="480dp"
         android:src="@drawable/login_logo" />
 
     <LinearLayout
@@ -22,20 +22,15 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Login"
-            android:textColor="@color/teal_700"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="13dp"
+            app:boxCornerRadiusBottomStart="13dp"
+            app:boxCornerRadiusTopEnd="13dp"
+            app:boxCornerRadiusTopStart="13dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etLoginEmail"
@@ -50,7 +45,11 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusBottomEnd="13dp"
+            app:boxCornerRadiusBottomStart="13dp"
+            app:boxCornerRadiusTopEnd="13dp"
+            app:boxCornerRadiusTopStart="13dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etLoginPass"
@@ -63,9 +62,12 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Login" />
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:text="Log In"
+            android:textSize="20sp"
+            app:backgroundTint="#EF4D23"
+            app:cornerRadius="12dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -77,16 +79,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Not registered yet"
+                android:text="Not registered yet?"
                 android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tvRegisterHere"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:text="Register here"
-                android:textColor="@color/teal_700"
+                android:layout_marginLeft="9dp"
+                android:text="Register Here"
+                android:textColor="#74b03a"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
