@@ -19,6 +19,7 @@ import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.example.angkolskitchenapp.GalleryMenu;
+import com.example.angkolskitchenapp.LoginActivity;
 import com.example.angkolskitchenapp.PlaceOrderActivity;
 import com.example.angkolskitchenapp.R;
 import com.example.angkolskitchenapp.model.UserModel;
@@ -40,7 +41,7 @@ public class ProfileFragment extends Fragment {
 
     CircleImageView profileImg;
     EditText name, email, number, address;
-    Button update;
+    Button update, logout;
 
     FirebaseStorage storage;
     FirebaseAuth auth;
@@ -61,6 +62,7 @@ public class ProfileFragment extends Fragment {
         number = root.findViewById(R.id.profile_number);
         address = root.findViewById(R.id.profile_address);
         update = root.findViewById(R.id.update);
+        logout = root.findViewById(R.id.logout);
 
         database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -93,6 +95,19 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 updateUserProfile();
+            }
+        });
+
+        logout.setOnClickListener(new  View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+
+                Toast.makeText(getContext(), "Logged Out Successfully", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getContext(), LoginActivity.class);
+                startActivity(intent);
             }
         });
 
