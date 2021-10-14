@@ -5,39 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
     tools:context=".RegisterActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:src="@drawable/angkol_logo"
-        android:layout_marginTop="25dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:src="@drawable/login_logo" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="388dp"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Register"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="@color/teal_700"
-            android:gravity="center_horizontal"
-            android:layout_marginVertical="16dp"/>
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusBottomEnd="13dp"
+            app:boxCornerRadiusBottomStart="13dp"
+            app:boxCornerRadiusTopEnd="13dp"
+            app:boxCornerRadiusTopStart="13dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etRegEmail"
@@ -52,7 +44,11 @@
             android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusBottomEnd="13dp"
+            app:boxCornerRadiusBottomStart="13dp"
+            app:boxCornerRadiusTopEnd="13dp"
+            app:boxCornerRadiusTopStart="13dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etRegPass"
@@ -65,9 +61,12 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Register"/>
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:text="Register"
+            android:textSize="20sp"
+            app:backgroundTint="#EF4D23"
+            app:cornerRadius="12dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -79,16 +78,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Already registered"
+                android:text="Already registered?"
                 android:textSize="16sp"/>
 
             <TextView
                 android:id="@+id/tvLoginHere"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:text="Login here"
-                android:textColor="@color/teal_700"
+                android:layout_marginLeft="9dp"
+                android:text="Log In Here"
+                android:textColor="#74b03a"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
 
