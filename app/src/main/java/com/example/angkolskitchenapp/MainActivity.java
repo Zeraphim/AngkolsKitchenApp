@@ -90,12 +90,12 @@ public class MainActivity extends AppCompatActivity {
         OnboardingItem weCare = new OnboardingItem();
         weCare.setTitle("WE CARE A LOT");
         weCare.setDescription("Keep track of your nutrition and diet while consuming delicious food");
-        weCare.setImage(R.drawable.on_the_way);
+        weCare.setImage(R.drawable.page_2);
 
         OnboardingItem enjoyTheApp = new OnboardingItem();
         enjoyTheApp.setTitle("ENJOY MGA KA-ANGKOL’S");
         enjoyTheApp.setDescription("Jump right in! Sign up, explore, and order now! See you mga ka-Angkol's!");
-        enjoyTheApp.setImage(R.drawable.eat_together);
+        enjoyTheApp.setImage(R.drawable.page_3);
 
         onboardingItems.add(welcomeToApp);
         onboardingItems.add(weCare);
