@@ -6,6 +6,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,47 +36,63 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        layoutOnboardingIndicators = findViewById(R.id.layoutOnboardingIndicators);
-        buttonOnboardingAction = findViewById(R.id.buttonOnboardingAction);
-
-        setupOnboardingItems();
-
-        ViewPager2 onboardingViewPager = findViewById(R.id.onboardingViewPager);
-        onboardingViewPager.setAdapter(onboardingAdapter);
-
-        setupOnboardingIndicators();
-        setCurrentOnboardingIndicator(0);
-
-        onboardingViewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                setCurrentOnboardingIndicator(position);
+        if (restorePrefData()) {
+            auth = FirebaseAuth.getInstance();
+            if(auth.getCurrentUser() == null){
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
+            }else {
+                //Toast.makeText(this, "Already logged in", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), GalleryMenu.class));
+                finish();
             }
-        });
+        } else {
 
-        buttonOnboardingAction.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            savePrefsData();
 
-                if (onboardingViewPager.getCurrentItem() + 1 < onboardingAdapter.getItemCount()) {
-                    onboardingViewPager.setCurrentItem(onboardingViewPager.getCurrentItem() + 1);
-                } else {
 
-                    auth = FirebaseAuth.getInstance();
-                    if(auth.getCurrentUser() == null){
-                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                        finish();
-                    }else{
-                        //Toast.makeText(this, "Already logged in", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), GalleryMenu.class));
-                        finish();
-                    }
+            layoutOnboardingIndicators = findViewById(R.id.layoutOnboardingIndicators);
+            buttonOnboardingAction = findViewById(R.id.buttonOnboardingAction);
 
+            setupOnboardingItems();
+
+            ViewPager2 onboardingViewPager = findViewById(R.id.onboardingViewPager);
+            onboardingViewPager.setAdapter(onboardingAdapter);
+
+            setupOnboardingIndicators();
+            setCurrentOnboardingIndicator(0);
+
+            onboardingViewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+                @Override
+                public void onPageSelected(int position) {
+                    super.onPageSelected(position);
+                    setCurrentOnboardingIndicator(position);
                 }
-            }
-        });
+            });
 
+            buttonOnboardingAction.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    if (onboardingViewPager.getCurrentItem() + 1 < onboardingAdapter.getItemCount()) {
+                        onboardingViewPager.setCurrentItem(onboardingViewPager.getCurrentItem() + 1);
+                    } else {
+
+                        auth = FirebaseAuth.getInstance();
+                        if(auth.getCurrentUser() == null){
+                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                            finish();
+                        }else{
+                            //Toast.makeText(this, "Already logged in", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), GalleryMenu.class));
+                            finish();
+                        }
+
+                    }
+                }
+            });
+
+        }
     }
 
     private void setupOnboardingItems() {
@@ -143,5 +160,18 @@ public class MainActivity extends AppCompatActivity {
         } else {
             buttonOnboardingAction.setText("Next");
         }
+    }
+
+    private void savePrefsData() {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putBoolean("isIntroOpnend",true);
+        editor.commit();
+    }
+
+    private boolean restorePrefData() {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
+        Boolean isIntroActivityOpnendBefore = pref.getBoolean("isIntroOpnend",false);
+        return  isIntroActivityOpnendBefore;
     }
 }
