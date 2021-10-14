@@ -66,8 +66,6 @@ public class MyCartFragment extends Fragment {
 
         overTotalAmount = root.findViewById(R.id.textView6);
 
-        LocalBroadcastManager.getInstance(getActivity()).registerReceiver(mMessageReceiver, new IntentFilter("MyTotalAmount"));
-
         overTotalAmount = root.findViewById(R.id.textView6);
 
         recyclerView = root.findViewById(R.id.recyclerview);
@@ -95,6 +93,8 @@ public class MyCartFragment extends Fragment {
                         progressBar.setVisibility(View.GONE);
                         recyclerView.setVisibility(View.VISIBLE);
                     }
+
+                    calculateTotalAmount(cartModelList);
                 }
             }
         });
@@ -112,12 +112,14 @@ public class MyCartFragment extends Fragment {
         return root;
     }
 
-    public BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
+    private void calculateTotalAmount(List<MyCartModel> cartModelList) {
 
-            int totalBill = intent.getIntExtra("totalAmount", 0);
-            overTotalAmount.setText("Total Bill: ₱" + totalBill);
+        double totalAmount = 0.0;
+        for (MyCartModel myCartModel : cartModelList) {
+            totalAmount += myCartModel.getTotalPrice();
         }
-    };
+
+        overTotalAmount.setText("Total Amount: ₱" + totalAmount);
+
+    }
 }
