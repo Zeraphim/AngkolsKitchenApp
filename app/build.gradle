@@ -86,4 +86,7 @@ dependencies {
     // firebase bug fix
     implementation "io.grpc:grpc-okhttp:1.32.2"
 
+    //Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 }
