@@ -83,18 +83,18 @@ public class MainActivity extends AppCompatActivity {
         List<OnboardingItem> onboardingItems = new ArrayList<>();
 
         OnboardingItem welcomeToApp = new OnboardingItem();
-        welcomeToApp.setTitle("Welcome To Angkol's Kitchen");
-        welcomeToApp.setDescription("Get started by exploring a variety of  delicacies and discovering your favourite meals that you could easily select in a single tap and have it delivered right at your doorstep.");
-        welcomeToApp.setImage(R.drawable.pay_online);
+        welcomeToApp.setTitle("WELCOME TO ANGKOL’S KITCHEN");
+        welcomeToApp.setDescription("Start discovering your favourite meals by exploring a variety of delicacies.");
+        welcomeToApp.setImage(R.drawable.page_1);
 
         OnboardingItem weCare = new OnboardingItem();
-        weCare.setTitle("We Care A Lot");
-        weCare.setDescription("Not only can you order good food, but also keep track of the nutritional facts and needs that your diet requires, implemented by the health feature of this app that automatically computes caloric intake.");
+        weCare.setTitle("WE CARE A LOT");
+        weCare.setDescription("Keep track of your nutrition and diet while consuming delicious food");
         weCare.setImage(R.drawable.on_the_way);
 
         OnboardingItem enjoyTheApp = new OnboardingItem();
-        enjoyTheApp.setTitle("Enjoy Mga Ka Angkol's");
-        enjoyTheApp.setDescription("Nonetheless, Angkol's Kitchen values customer satisfaction through distinctive meals that will leave you wanting more. Hence, let's jump right into it by signing up, exploring the app feautures and don't forget to click on the order button. See you mga ka-Angkol's!");
+        enjoyTheApp.setTitle("ENJOY MGA KA-ANGKOL’S");
+        enjoyTheApp.setDescription("Jump right in! Sign up, explore, and order now! See you mga ka-Angkol's!");
         enjoyTheApp.setImage(R.drawable.eat_together);
 
         onboardingItems.add(welcomeToApp);
