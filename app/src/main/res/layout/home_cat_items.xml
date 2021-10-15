@@ -9,13 +9,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FC6A57"
+        android:background="#e5454c"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/home_cat_img"
-            android:layout_width="50dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:src="@drawable/milk2"
@@ -30,7 +30,7 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="5dp" />
 
     </LinearLayout>
 
