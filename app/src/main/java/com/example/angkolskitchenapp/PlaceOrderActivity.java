@@ -2,8 +2,14 @@ package com.example.angkolskitchenapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.angkolskitchenapp.activities.DetailedActivity;
@@ -23,10 +29,19 @@ public class PlaceOrderActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseFirestore firestore;
 
+    //
+    Button buyNow;
+    private static final String PRIMARY_CHANNEL_ID = "primary_notification_channel";
+    private NotificationManager mNotifyManager;
+    private static final int NOTIFICATION_ID = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_order);
+        //
+        buyNow = findViewById(R.id.buy_now);
+        createNotificationChannel();
 
         auth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
@@ -51,10 +66,49 @@ public class PlaceOrderActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<DocumentReference> task) {
                         Toast.makeText(PlaceOrderActivity.this, "Your Order Has Been Placed", Toast.LENGTH_SHORT).show();
+                        sendNotification();
 
                     }
                 });
             }
         }
+    }
+
+    public void createNotificationChannel()
+    {
+        mNotifyManager = (NotificationManager)
+                getSystemService(NOTIFICATION_SERVICE);
+        if (android.os.Build.VERSION.SDK_INT >=
+                android.os.Build.VERSION_CODES.O) {
+            // Create a NotificationChannel
+            NotificationChannel notificationChannel = new NotificationChannel(PRIMARY_CHANNEL_ID,
+                    "Mascot Notification", NotificationManager
+                    .IMPORTANCE_HIGH);
+
+            notificationChannel.enableLights(true);
+            notificationChannel.setLightColor(Color.RED);
+            notificationChannel.enableVibration(true);
+            notificationChannel.setDescription("Notification from Mascot");
+            mNotifyManager.createNotificationChannel(notificationChannel);
+
+
+        }
+    }
+    private NotificationCompat.Builder getNotificationBuilder(){
+        NotificationCompat.Builder notifyBuilder = new NotificationCompat.Builder(this, PRIMARY_CHANNEL_ID);
+        notifyBuilder.setContentTitle(getString(R.string.notification_title))
+                .setContentText(getString(R.string.notification_text))
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setDefaults(NotificationCompat.DEFAULT_ALL)
+                .setSmallIcon(R.drawable.ic_baseline_bike_scooter_24);
+
+        return notifyBuilder;
+
+    }
+
+    public void sendNotification() {
+        NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
+        mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
     }
 }

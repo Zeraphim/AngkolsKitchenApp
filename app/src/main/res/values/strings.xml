@@ -40,4 +40,6 @@
     <string name="my_carts">My Carts</string>
     <string name="offers">Offers</string>
     <string name="about">About</string>
+    <string name="notification_text">"Get ready your order is on the way "</string>
+    <string name="notification_title">Nice Choice Ka-Angkol !</string>
 </resources>
