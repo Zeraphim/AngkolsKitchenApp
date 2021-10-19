@@ -42,4 +42,6 @@
     <string name="about">About</string>
     <string name="notification_text">"Get ready your order is on the way "</string>
     <string name="notification_title">Nice Choice Ka-Angkol !</string>
+    <string name="about_message1">Hi mga ka-Angkols! Welcome to our Kitchen, our kitchen is a one stop shop based on Quezon City that offers a variety of declicious meals and delicacies such as silog meals, pastas, burgers, appetizers up to milk teas and pastries that are charged at an affordable price. We also do catering services, so if ineed of delicious and affordable meals for a party or an event we gotchu :)</string>
+    <string name="about_message2">Despite being in the middle of a pandemic, Angkol’s Kitchen makes sure that your safety is of utmost importance by following covid-19 safety protocls so do not fret and head on out to our kitchen, see you mga ka-Angkol’s!</string>
 </resources>
