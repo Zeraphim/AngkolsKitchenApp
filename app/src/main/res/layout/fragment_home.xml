@@ -29,26 +29,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:drawableLeft="@drawable/ic_baseline_search_24"
                 android:background="@drawable/search_gb"
-                android:padding="13dp"
-                android:hint="Search Your Item Here ..."
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
                 android:drawablePadding="5dp"
-                android:drawableStart="@drawable/ic_baseline_search_24" />
+                android:hint="Search Your Item Here ..."
+                android:padding="13dp" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_rec"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/search_rec"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
             <!--  split  -->
 
             <LinearLayout
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
@@ -58,7 +58,7 @@
                     android:layout_weight="1"
                     android:text="Popular Products"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
 
                 <!--
@@ -78,18 +78,18 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pop_rec"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:id="@+id/pop_rec"/>
+                android:layout_margin="5dp" />
 
             <!--  split  -->
 
             <LinearLayout
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
@@ -99,7 +99,7 @@
                     android:layout_weight="1"
                     android:text="Explore Products"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <!--
                 <TextView
@@ -119,18 +119,18 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/explore_rec"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:id="@+id/explore_rec"/>
+                android:layout_margin="5dp" />
 
             <!--  split  -->
 
             <LinearLayout
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
@@ -140,7 +140,7 @@
                     android:layout_weight="1"
                     android:text="Recommended"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <!--
                 <TextView
@@ -160,10 +160,10 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommended_rec"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:id="@+id/recommended_rec"/>
+                android:layout_margin="5dp" />
 
 
         </LinearLayout>
