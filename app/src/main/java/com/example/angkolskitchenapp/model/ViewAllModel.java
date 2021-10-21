@@ -11,25 +11,29 @@ public class ViewAllModel implements Serializable {
     String type;
     int price;
 
-    /*
+
     int calories;
     int carbs;
     int fat;
     int protein;
 
-    */
+
 
     public ViewAllModel() {
 
     }
 
-    public ViewAllModel(String name, String description, String rating, String img_url, String type, int price) {
+    public ViewAllModel(String name, String description, String rating, String img_url, String type, int price, int calories, int carbs, int fat, int protein) {
         this.name = name;
         this.description = description;
         this.rating = rating;
         this.img_url = img_url;
         this.type = type;
         this.price = price;
+        this.calories = calories;
+        this.carbs = carbs;
+        this.fat = fat;
+        this.protein = protein;
     }
 
     public String getName() {
@@ -78,5 +82,37 @@ public class ViewAllModel implements Serializable {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public void setCalories(int calories) {
+        this.calories = calories;
+    }
+
+    public int getCarbs() {
+        return carbs;
+    }
+
+    public void setCarbs(int carbs) {
+        this.carbs = carbs;
+    }
+
+    public int getFat() {
+        return fat;
+    }
+
+    public void setFat(int fat) {
+        this.fat = fat;
+    }
+
+    public int getProtein() {
+        return protein;
+    }
+
+    public void setProtein(int protein) {
+        this.protein = protein;
     }
 }

@@ -13,10 +13,15 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.angkolskitchenapp.R;
+import com.example.angkolskitchenapp.model.UserModel;
 import com.example.angkolskitchenapp.model.ViewAllModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -39,6 +44,7 @@ public class DetailedActivity extends AppCompatActivity {
 
     FirebaseFirestore firestore;
     FirebaseAuth auth;
+    FirebaseDatabase database;
 
     ViewAllModel viewAllModel = null;
 
@@ -54,6 +60,8 @@ public class DetailedActivity extends AppCompatActivity {
 
         firestore = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+
 
         final Object object = getIntent().getSerializableExtra("detail");
         if (object instanceof ViewAllModel) {
@@ -137,6 +145,38 @@ public class DetailedActivity extends AppCompatActivity {
         cartMap.put("totalQuantity", quantity.getText().toString());
         cartMap.put("totalPrice", totalPrice);
 
+        // Adding health tracker variables to user
+
+
+        database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                UserModel userModel = snapshot.getValue(UserModel.class);
+
+                int caloriesTotal = userModel.getCalories() + (viewAllModel.getCalories() * Integer.valueOf(quantity.getText().toString()));
+                int carbsTotal = userModel.getCarbs() + (viewAllModel.getCarbs() * Integer.valueOf(quantity.getText().toString()));
+                int fatTotal = userModel.getFat() + (viewAllModel.getFat() * Integer.valueOf(quantity.getText().toString()));
+                int proteinTotal = userModel.getProtein() + (viewAllModel.getProtein() * Integer.valueOf(quantity.getText().toString()));
+
+                database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                        .child("calories").setValue(caloriesTotal);
+                database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                        .child("carbs").setValue(carbsTotal);
+                database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                        .child("fat").setValue(fatTotal);
+                database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid())
+                        .child("protein").setValue(proteinTotal);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
         // Firestore adding to user
 
         firestore.collection("CurrentUser").document(auth.getCurrentUser().getUid()).collection("AddToCart").add(cartMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
@@ -146,6 +186,8 @@ public class DetailedActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
 
     }
 
