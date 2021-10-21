@@ -6,6 +6,7 @@
     android:background="@drawable/side_nav_bar"
     android:gravity="bottom"
     android:orientation="vertical"
+    android:layout_marginTop="40dp"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -26,9 +27,8 @@
 
     <TextView
         android:id="@+id/nav_header_name"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
@@ -36,9 +36,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
-
         android:id="@+id/nav_header_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

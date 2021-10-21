@@ -14,7 +14,7 @@
             android:title="Profile" />
         <item
             android:id="@+id/nav_health"
-            android:icon="@drawable/ic_baseline_category_24"
+            android:icon="@drawable/heart_rate"
             android:title="Health Tracker" />
 
         <item
@@ -39,7 +39,7 @@
 
         <item
             android:id="@+id/nav_about"
-            android:icon="@drawable/mycart"
+            android:icon="@drawable/about_icon"
             android:title="About" />
     </group>
 </menu>
