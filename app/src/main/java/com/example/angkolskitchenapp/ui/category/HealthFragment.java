@@ -21,13 +21,17 @@ public class HealthFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
+        int textSize = 75;
+
         View root = inflater.inflate(R.layout.fragment_health, container, false);
 
         AnimatedPieView mAnimatedPieView = root.findViewById(R.id.animatedPieView);
         AnimatedPieViewConfig config = new AnimatedPieViewConfig();
         config.startAngle(-90)// Starting angle offset
-                .addData(new SimplePieInfo(20, Color.parseColor("#ff0000"), "Title 1")).drawText(true).textSize(50).canTouch(true)
-                .addData(new SimplePieInfo(10, Color.parseColor("#00ff00"), "Title 2")).drawText(true).textSize(50).canTouch(true)
+                .addData(new SimplePieInfo(10, Color.parseColor("#FF5765"), "Calories")).drawText(true).textSize(textSize).canTouch(true)
+                .addData(new SimplePieInfo(10, Color.parseColor("#FFDB15"), "Carbs")).drawText(true).textSize(textSize).canTouch(true)
+                .addData(new SimplePieInfo(10, Color.parseColor("#8A6FDF"), "Fat")).drawText(true).textSize(textSize).canTouch(true)
+                .addData(new SimplePieInfo(10, Color.parseColor("#A8E10C"), "Protein")).drawText(true).textSize(textSize).canTouch(true)
                 .duration(2000);// draw pie animation duration
 
 // The following two sentences can be replace directly 'mAnimatedPieView.start (config); '
