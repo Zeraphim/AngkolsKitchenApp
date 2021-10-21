@@ -8,6 +8,7 @@
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/drawable/circle_shadow.xml" value="0.3828125" />
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.3828125" />
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.3828125" />
+        <entry key="..\:/AngkolsKitchenApp/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.3828125" />
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.3828125" />
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/drawable/mycarts_shopping_cart.xml" value="0.3828125" />
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/drawable/onboarding_indicator_active.xml" value="0.3828125" />
@@ -29,6 +30,7 @@
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/layout/content_main.xml" value="0.2658514492753623" />
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/layout/fragment_about.xml" value="0.2658514492753623" />
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/layout/fragment_category.xml" value="0.2658514492753623" />
+        <entry key="..\:/AngkolsKitchenApp/app/src/main/res/layout/fragment_health.xml" value="0.36666666666666664" />
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/layout/fragment_home.xml" value="0.2658514492753623" />
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/layout/fragment_my_cart.xml" value="0.2658514492753623" />
         <entry key="..\:/AngkolsKitchenApp/app/src/main/res/layout/fragment_my_order.xml" value="0.2658514492753623" />
