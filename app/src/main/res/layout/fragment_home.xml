@@ -97,7 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Explore Products"
+                    android:text="Categories"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 

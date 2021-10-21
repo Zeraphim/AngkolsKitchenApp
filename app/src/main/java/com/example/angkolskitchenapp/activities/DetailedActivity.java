@@ -32,7 +32,7 @@ public class DetailedActivity extends AppCompatActivity {
     int totalPrice = 0;
 
     ImageView detailedImg;
-    TextView price, rating, description;
+    TextView price, rating, description, foodName;
     Button addToCart;
     ImageView addItem, removeItem;
     Toolbar toolbar;
@@ -66,12 +66,14 @@ public class DetailedActivity extends AppCompatActivity {
         addItem = findViewById(R.id.add_item);
         removeItem = findViewById(R.id.remove_item);
 
+        foodName = findViewById(R.id.foodName);
         price = findViewById(R.id.detailed_price);
         rating = findViewById(R.id.detailed_rating);
         description = findViewById(R.id.detailed_dec);
 
         if (viewAllModel != null) {
             Glide.with(getApplicationContext()).load(viewAllModel.getImg_url()).into(detailedImg);
+            foodName.setText(viewAllModel.getName());
             rating.setText(viewAllModel.getRating());
             description.setText(viewAllModel.getDescription());
             price.setText("₱ " + viewAllModel.getPrice() + ".00");
