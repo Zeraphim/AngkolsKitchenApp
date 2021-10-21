@@ -16,43 +16,11 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/header_calories"
-        android:layout_width="98dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="center_horizontal"
-        android:text="Calories"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animatedPieView" />
-
-    <TextView
-        android:id="@+id/val_calories"
-        android:layout_width="98dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="0dp"
-        android:fontFamily="@font/poppins_regular"
-        android:gravity="center_horizontal"
-        android:text="100"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_calories" />
-
-    <TextView
         android:id="@+id/header_carbs"
         android:layout_width="98dp"
         android:layout_height="35dp"
-        android:layout_marginStart="284dp"
-        android:layout_marginLeft="284dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center_horizontal"
@@ -61,16 +29,14 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animatedPieView"
-        app:layout_goneMarginLeft="100dp" />
+        app:layout_constraintTop_toBottomOf="@id/animatedPieView" />
 
     <TextView
         android:id="@+id/val_carbs"
-        android:layout_width="98dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="284dp"
-        android:layout_marginLeft="284dp"
-        android:layout_marginTop="0dp"
+        android:layout_width="96dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center_horizontal"
         android:text="100"
@@ -81,15 +47,15 @@
         app:layout_constraintTop_toBottomOf="@id/header_carbs" />
 
     <TextView
-        android:id="@+id/header_fat"
+        android:id="@+id/header_protein"
         android:layout_width="98dp"
         android:layout_height="35dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center_horizontal"
-        android:text="Fat"
+        android:text="Protein"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -97,12 +63,43 @@
         app:layout_constraintTop_toBottomOf="@id/animatedPieView" />
 
     <TextView
-        android:id="@+id/val_fat"
+        android:id="@+id/val_protein"
+        android:layout_width="98dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center_horizontal"
+        android:text="100"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_protein" />
+
+    <TextView
+        android:id="@+id/header_fat"
         android:layout_width="98dp"
         android:layout_height="35dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginLeft="284dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_horizontal"
+        android:text="Fat"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animatedPieView"
+        app:layout_goneMarginLeft="100dp" />
+
+    <TextView
+        android:id="@+id/val_fat"
+        android:layout_width="98dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginLeft="284dp"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center_horizontal"
         android:text="100"
@@ -113,15 +110,15 @@
         app:layout_constraintTop_toBottomOf="@id/header_fat" />
 
     <TextView
-        android:id="@+id/header_protein"
+        android:id="@+id/header_calories"
         android:layout_width="98dp"
         android:layout_height="35dp"
-        android:layout_marginStart="284dp"
-        android:layout_marginLeft="284dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
         android:layout_marginTop="148dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center_horizontal"
-        android:text="Protein"
+        android:text="Calories"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -130,12 +127,11 @@
         app:layout_goneMarginLeft="100dp" />
 
     <TextView
-        android:id="@+id/val_protein"
+        android:id="@+id/val_calories"
         android:layout_width="98dp"
         android:layout_height="35dp"
-        android:layout_marginStart="284dp"
-        android:layout_marginLeft="284dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center_horizontal"
         android:text="100"
@@ -143,7 +139,7 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_protein" />
+        app:layout_constraintTop_toBottomOf="@id/header_calories" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

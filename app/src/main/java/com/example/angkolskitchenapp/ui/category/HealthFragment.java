@@ -55,19 +55,18 @@ public class HealthFragment extends Fragment {
                 UserModel userModel = snapshot.getValue(UserModel.class);
 
                 calories.setText(String.valueOf(userModel.getCalories()));
-                carbs.setText(String.valueOf(userModel.getCarbs()));
-                protein.setText(String.valueOf(userModel.getProtein()));
-                fat.setText(String.valueOf(userModel.getFat()));
+                carbs.setText(String.valueOf(userModel.getCarbs() + "g"));
+                protein.setText(String.valueOf(userModel.getProtein() + "g"));
+                fat.setText(String.valueOf(userModel.getFat() + "g"));
 
                 // Pie Chart
 
                 AnimatedPieView mAnimatedPieView = root.findViewById(R.id.animatedPieView);
                 AnimatedPieViewConfig config = new AnimatedPieViewConfig();
                 config.startAngle(-90)// Starting angle offset
-                        .addData(new SimplePieInfo(userModel.getCalories(), Color.parseColor("#FF5765"), "Calories")).drawText(true).textSize(textSize).canTouch(true)
-                        .addData(new SimplePieInfo(userModel.getCarbs(), Color.parseColor("#FFDB15"), "Carbs")).drawText(true).textSize(textSize).canTouch(true)
-                        .addData(new SimplePieInfo(userModel.getProtein(), Color.parseColor("#8A6FDF"), "Fat")).drawText(true).textSize(textSize).canTouch(true)
-                        .addData(new SimplePieInfo(userModel.getFat(), Color.parseColor("#A8E10C"), "Protein")).drawText(true).textSize(textSize).canTouch(true)
+                        .addData(new SimplePieInfo(userModel.getCarbs(), Color.parseColor("#8A6FDF"), "Carbs")).drawText(true).textSize(textSize).canTouch(true)
+                        .addData(new SimplePieInfo(userModel.getFat(), Color.parseColor("#FF5765"), "Fat")).drawText(true).textSize(textSize).canTouch(true)
+                        .addData(new SimplePieInfo(userModel.getProtein(), Color.parseColor("#A8E10C"), "Protein")).drawText(true).textSize(textSize).canTouch(true)
                         .duration(2000);// draw pie animation duration
 
 // The following two sentences can be replace directly 'mAnimatedPieView.start (config); '
