@@ -3,16 +3,32 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
-    app:cardCornerRadius="7dp"
+    android:layout_margin="7dp"
+    app:cardCornerRadius="18dp"
     app:cardElevation="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#B3FB9F"
-        android:padding="8dp"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="9dp"
+            android:src="@drawable/shopping_cart" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,11 +37,11 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="Product Name"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/product_name"
@@ -47,7 +63,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Product Price"
@@ -73,7 +89,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Current Date"
@@ -99,7 +115,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Current Time"
@@ -125,7 +141,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Total Price"
@@ -151,7 +167,7 @@
             android:weightSum="2">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="310dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Total Quantity"
@@ -166,13 +182,16 @@
                 android:text="Total Quantity"
                 android:textSize="16sp"/>
 
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+
+                android:src="@drawable/ic_baseline_delete_24"/>
+
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/delete"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_delete_24"/>
+    </LinearLayout>
 
     </LinearLayout>
 
