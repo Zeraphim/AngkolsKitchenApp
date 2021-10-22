@@ -7,62 +7,82 @@
     tools:context=".OfferFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center|top"
-        android:text="Special Offers"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/promo2"
+        app:layout_constraintTop_toTopOf="@+id/promo2">
 
-    <ImageView
-        android:id="@+id/promo1"
-        android:layout_width="match_parent"
-        android:layout_height="211dp"
-        android:layout_gravity="top|center_vertical"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        tools:src="@drawable/promo1" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:text="Special Offers"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/promo1_desc"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="280dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:text="Available only on dine-in transaction at 2pm to 4pm."
-        android:textStyle="normal" />
+        <ImageView
+            android:id="@+id/promo1"
+            android:layout_width="351dp"
+            android:layout_height="269dp"
 
-    <ImageView
-        android:id="@+id/promo2"
-        android:layout_width="match_parent"
-        android:layout_height="211dp"
-        android:layout_gravity="top|center_vertical"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        tools:src="@drawable/promo2" />
-    <TextView
-        android:id="@+id/promo2_desc"
-        android:layout_width="395dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="540dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:text="Enjoy good food together with your friends with this barkada bundles."
-        android:textStyle="normal" />
+            android:layout_marginBottom="392dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/promo1" />
 
+        <TextView
+            android:id="@+id/promo1_desc"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="Available only on dine-in transaction at 2pm to 4pm."
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/promo1"
+            app:layout_constraintVertical_bias="0.0" />
 
+        <ImageView
+            android:id="@+id/promo2"
+            android:layout_width="351dp"
+            android:layout_height="263dp"
+            android:layout_marginBottom="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/promo2_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/promo1_desc"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/promo_2" />
+
+        <TextView
+            android:id="@+id/promo2_desc"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Enjoy good food together with your friends with this barkada bundles."
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/promo1_desc"
+            app:layout_constraintVertical_bias="0.964" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
