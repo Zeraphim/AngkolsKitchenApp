@@ -6,6 +6,7 @@ import androidx.core.app.NotificationCompat;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.angkolskitchenapp.activities.DetailedActivity;
+import com.example.angkolskitchenapp.adapters.MyCartAdapter;
 import com.example.angkolskitchenapp.model.MyCartModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -29,8 +31,10 @@ public class PlaceOrderActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseFirestore firestore;
 
+
+
     //
-    Button buyNow;
+    Button btnGallery;
     private static final String PRIMARY_CHANNEL_ID = "primary_notification_channel";
     private NotificationManager mNotifyManager;
     private static final int NOTIFICATION_ID = 0;
@@ -40,7 +44,7 @@ public class PlaceOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_order);
         //
-        buyNow = findViewById(R.id.buy_now);
+        btnGallery = findViewById(R.id.gallery_btn);
         createNotificationChannel();
 
         auth = FirebaseAuth.getInstance();
@@ -72,6 +76,17 @@ public class PlaceOrderActivity extends AppCompatActivity {
                 });
             }
         }
+
+
+        btnGallery.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), GalleryMenu.class));
+                finish();
+            }
+        });
+
     }
 
     public void createNotificationChannel()
@@ -111,4 +126,5 @@ public class PlaceOrderActivity extends AppCompatActivity {
         NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
         mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
     }
+
 }

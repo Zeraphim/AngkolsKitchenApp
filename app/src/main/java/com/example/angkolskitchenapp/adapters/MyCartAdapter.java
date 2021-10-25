@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.angkolskitchenapp.MyCartFragment;
 import com.example.angkolskitchenapp.R;
 import com.example.angkolskitchenapp.model.MyCartModel;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -46,12 +48,16 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
+
+
         holder.name.setText(cartModelList.get(position).getProductName());
         holder.price.setText(cartModelList.get(position).getProductPrice());
         holder.date.setText(cartModelList.get(position).getCurrentDate());
         holder.time.setText(cartModelList.get(position).getCurrentTime());
         holder.quantity.setText(cartModelList.get(position).getTotalQuantity());
         holder.totalPrice.setText(String.valueOf(cartModelList.get(position).getTotalPrice()));
+
+
 
         holder.deleteItem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +95,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
         TextView name, price, date, time, quantity, totalPrice;
         ImageView deleteItem;
 
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -99,6 +106,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
             quantity = itemView.findViewById(R.id.total_quantity);
             totalPrice = itemView.findViewById(R.id.total_price);
             deleteItem = itemView.findViewById(R.id.delete);
+
         }
 
 

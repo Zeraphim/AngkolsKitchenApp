@@ -43,9 +43,11 @@ public class MyCartFragment extends Fragment {
     MyCartAdapter cartAdapter;
     List<MyCartModel> cartModelList;
 
+
     Button buyNow;
     int totalBill;
     ProgressBar progressBar;
+
 
     public MyCartFragment() {
         // Required empty public constructor
@@ -71,6 +73,7 @@ public class MyCartFragment extends Fragment {
         recyclerView = root.findViewById(R.id.recyclerview);
         recyclerView.setVisibility(View.GONE);
         buyNow = root.findViewById(R.id.buy_now);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         cartModelList = new ArrayList<>();
@@ -102,9 +105,35 @@ public class MyCartFragment extends Fragment {
         buyNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                int ctr = 0;
+
+                while(ctr != cartModelList.size()) {
+
+                    db.collection("CurrentUser").document(auth.getCurrentUser().getUid()).collection("AddToCart")
+                            .document(cartModelList.get(ctr).getDocumentId())
+                            .delete()
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+
+                                    if (task.isSuccessful()){
+                                        cartModelList.removeAll(cartModelList);
+                                    } else {
+                                    }
+
+                                }
+                            });
+
+                    ctr += 1;
+
+                }
+
+
                 Intent intent = new Intent(getContext(), PlaceOrderActivity.class);
                 intent.putExtra("itemList", (Serializable) cartModelList);
                 startActivity(intent);
+
             }
         });
 
