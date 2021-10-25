@@ -16,12 +16,28 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/percentage_carbs"
+        android:layout_width="98dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center_horizontal"
+        android:text="0%"
+        android:textAlignment="center"
+        android:textColor="#8A6FDF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animatedPieView" />
+
+    <TextView
         android:id="@+id/header_carbs"
         android:layout_width="98dp"
         android:layout_height="35dp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center_horizontal"
         android:text="Carbs"
@@ -47,12 +63,28 @@
         app:layout_constraintTop_toBottomOf="@id/header_carbs" />
 
     <TextView
+        android:id="@+id/percentage_protein"
+        android:layout_width="98dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center_horizontal"
+        android:text="0%"
+        android:textAlignment="center"
+        android:textColor="#A8E10C"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animatedPieView" />
+
+    <TextView
         android:id="@+id/header_protein"
         android:layout_width="98dp"
         android:layout_height="35dp"
         android:layout_marginStart="156dp"
         android:layout_marginLeft="156dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center_horizontal"
         android:text="Protein"
@@ -78,12 +110,28 @@
         app:layout_constraintTop_toBottomOf="@id/header_protein" />
 
     <TextView
+        android:id="@+id/percentage_fat"
+        android:layout_width="98dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginLeft="284dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center_horizontal"
+        android:text="0%"
+        android:textAlignment="center"
+        android:textColor="#FF5765"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animatedPieView" />
+
+    <TextView
         android:id="@+id/header_fat"
         android:layout_width="98dp"
         android:layout_height="35dp"
         android:layout_marginStart="284dp"
         android:layout_marginLeft="284dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center_horizontal"
         android:text="Fat"
@@ -141,5 +189,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_calories" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reset_btn"
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:text="Reset"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#EF4D23"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

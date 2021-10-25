@@ -76,18 +76,19 @@
             app:layout_constraintTop_toBottomOf="@+id/textView6"
              />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buy_now"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:text="Buy Now"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
-            android:background="#EF4D23"
+            app:backgroundTint="#EF4D23"
+            app:cornerRadius="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp" />
 
         <ProgressBar
 

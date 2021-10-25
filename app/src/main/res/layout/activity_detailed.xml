@@ -104,16 +104,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/detailed_img" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/add_to_cart"
         android:layout_width="330dp"
         android:layout_height="47dp"
         android:layout_marginTop="444dp"
-        android:background="#EF4D23"
         android:text="Add To Cart"
-        android:textColor="#FFFF"
-        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textSize="20sp"
         android:textStyle="bold"
+        app:backgroundTint="#EF4D23"
+        app:cornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"

@@ -147,7 +147,6 @@ public class DetailedActivity extends AppCompatActivity {
 
         // Adding health tracker variables to user
 
-
         database.getReference().child("Users").child(FirebaseAuth.getInstance().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
